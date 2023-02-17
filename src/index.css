@@ -83,23 +83,36 @@ h5 {
   padding: 0.25rem 1rem 0.25rem 0.25rem;
   display: flex;
 }
+.tasks .deleted {
+  background: tomato;
+  border: grey solid 0.1rem;
+  border-bottom: none;
+  padding: 0.25rem 1rem 0.25rem 0.25rem;
+  display: flex;
+  text-decoration: line-through;
+}
 
-.tasks .task:first-of-type {
+.tasks .task:first-of-type,
+.tasks .deleted:first-of-type {
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-.tasks .task:last-of-type {
+
+.tasks .task:last-of-type,
+.tasks .deleted:last-of-type {
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom: grey solid 0.1rem;
 }
 
-.tasks .task .text {
+.tasks .task .text,
+.tasks .deleted .text {
   line-height: 1.5rem;
   padding-left: 0.25rem;
 }
 
-.tasks .task .label {
+.tasks .task .label,
+.tasks .deleted .label {
   background: lightcyan;
   color: blue;
   padding: 0.25rem;
@@ -108,7 +121,8 @@ h5 {
   border-radius: 0.25rem;
 }
 
-.tasks .task button.delete {
+.tasks .task button.delete,
+.tasks .deleted button.delete {
   padding: 0 0.5rem;
   margin-left: auto;
   border-radius: 0.5rem;
@@ -120,7 +134,8 @@ h5 {
   cursor: pointer;
 }
 
-.tasks .task button.delete:hover {
+.tasks .task button.delete:hover,
+.tasks .deleted button.delete:hover {
   filter: brightness(1.1);
 }
 
