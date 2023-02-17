@@ -68,11 +68,9 @@ h5 {
 }
 
 .tasks {
-  border-radius: 0.5rem;
   border: grey solid 0.1rem;
   border-top: none;
-  padding: 0 1rem;
-  padding-bottom: 1rem;
+  padding: 0 1rem 1rem 1rem;
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
@@ -83,6 +81,7 @@ h5 {
   padding: 0.25rem 1rem 0.25rem 0.25rem;
   display: flex;
 }
+
 .tasks .deleted {
   background: tomato;
   border: grey solid 0.1rem;
@@ -143,6 +142,7 @@ h5 {
   border: solid #8989ff 0.1rem;
   display: flex;
   align-items: flex-end;
+  padding: 0.5em;
 }
 
 .new-task-form input[type="submit"] {
@@ -153,6 +153,12 @@ h5 {
   cursor: pointer;
   box-sizing: border-box;
   width: 7rem;
+}
+.new-task-form input,
+.new-task-form select {
+  margin-top: 0.125em;
+  padding: 0.3em;
+  border-radius: 0.25em;
 }
 
 .new-task-form select {
