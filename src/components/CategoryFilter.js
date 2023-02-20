@@ -1,28 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
-function CategoryFilter({ categories }) {
-  const [isSelected, setIsSelected] = useState(false);
-  // console.log("CategoryFilter", categories);
-
+function CategoryFilter({ categories, handleBtnClick }) {
   const allCategories = categories.map((member) => (
-    <button
-      key={member}
-      // onClick={() => handleBtnClick(member)}
-      onClick={handleBtnClick}
-    >
+    <button key={member} onClick={handleBtnClick}>
       {member}
     </button>
   ));
 
-  function handleBtnClick(event) {
-    // console.log(allCategories[4].key);
-    // console.log(event.target);
-    // console.log("className", event.target.className);
-    if (event.target.className === "") event.target.classList.add("selected");
-    else if (event.target.className === "selected")
-      event.target.classList.remove("selected");
-    setIsSelected((isSelected) => !isSelected);
-  }
+  // function handleBtnClick(event) {
+  //   if (event.target.className === "") event.target.classList.add("selected");
+  //   else if (event.target.className === "selected")
+  //     event.target.classList.remove("selected");
+  //   setIsSelected((isSelected) => !isSelected);
+  // }
 
   return (
     <div className="categories">

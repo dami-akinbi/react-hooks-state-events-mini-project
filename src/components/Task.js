@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Task({ text, category, onHandleDelete }) {
-  const [btnClicked, setBtnClicked] = useState(false);
-
-  function onHandleDelete() {
-    setBtnClicked((btnClicked) => !btnClicked);
-  }
-
+function Task({ member, onHandleDelete }) {
   return (
-    <div className={btnClicked ? "deleted" : "task"}>
-      <div className="label">{category}</div>
-      <div className="text">{text}</div>
-      <button onClick={onHandleDelete} className="delete">
+    <div className={"task"}>
+      <div className="label">{member.category}</div>
+      <div className="text">{member.text}</div>
+      <button onClick={() => onHandleDelete(member)} className="delete">
         X
       </button>
     </div>
